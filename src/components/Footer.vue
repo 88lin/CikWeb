@@ -54,16 +54,16 @@
 
         <!-- 技术栈徽章 -->
         <div class="tech-badges">
-          <img src="https://img.shields.io/badge/Vue-3.3-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue" />
-          <img src="https://img.shields.io/badge/TypeScript-5.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-          <img src="https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-          <img src="https://img.shields.io/badge/Tailwind_CSS-4.2-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-          <img src="https://img.shields.io/badge/Pinia-2.1-ffd859?style=for-the-badge&logo=vue.js&logoColor=white" alt="Pinia" />
-          <img src="https://img.shields.io/badge/Sass-1.69-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass" />
-          <img src="https://img.shields.io/badge/SSG-Vite_SSG-8B5CF6?style=for-the-badge&logo=vite&logoColor=white" alt="Vite SSG" />
-          <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
+          <img :src="badgeVue" alt="Vue" />
+          <img :src="badgeTs" alt="TypeScript" />
+          <img :src="badgeVite" alt="Vite" />
+          <img :src="badgeTailwind" alt="Tailwind CSS" />
+          <img :src="badgePinia" alt="Pinia" />
+          <img :src="badgeSass" alt="Sass" />
+          <img :src="badgeSsg" alt="Vite SSG" />
+          <img :src="badgeLicense" alt="License" />
           <a href="https://github.com/cikheo/CikWeb" target="_blank" rel="noopener noreferrer">
-            <img src="https://img.shields.io/badge/GitHub-CikWeb-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+            <img :src="badgeGithub" alt="GitHub" />
           </a>
         </div>
       </div>
@@ -73,6 +73,17 @@
 
 <script setup lang="ts">
 import { computed, reactive } from 'vue'
+
+// 导入徽章图片
+import badgeVue from '@/assets/img/badges/vue.svg'
+import badgeTs from '@/assets/img/badges/typescript.svg'
+import badgeVite from '@/assets/img/badges/vite.svg'
+import badgeTailwind from '@/assets/img/badges/tailwind.svg'
+import badgePinia from '@/assets/img/badges/pinia.svg'
+import badgeSass from '@/assets/img/badges/sass.svg'
+import badgeSsg from '@/assets/img/badges/ssg.svg'
+import badgeLicense from '@/assets/img/badges/license.svg'
+import badgeGithub from '@/assets/img/badges/github.svg'
 
 // ==================== 数据配置区域 ====================
 

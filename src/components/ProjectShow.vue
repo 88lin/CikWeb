@@ -96,7 +96,11 @@
       <div v-if="index === 1" id="posts">
         <LatestPosts />
       </div>
-      <!-- 在最新文章之后插入联系组件 -->
+      <!-- 在最新文章之后插入主题组件 -->
+      <div v-if="index === 1" id="themes">
+        <ThemesSection />
+      </div>
+      <!-- 在主题组件之后插入联系组件 -->
       <div v-if="index === 1" id="contact">
         <ContactSection />
       </div>
@@ -110,6 +114,7 @@ import { projectShowData } from '@/data/projectshow'
 import ToolsSection from '@/components/ToolsSection.vue'
 import MediaSection from '@/components/MediaSection.vue'
 import LatestPosts from '@/components/LatestPosts.vue'
+import ThemesSection from '@/components/ThemesSection.vue'
 import ContactSection from '@/components/ContactSection.vue'
 
 const displayProjects = computed(() => projectShowData.filter((p) => p.featured).slice(0, 2))
@@ -154,9 +159,10 @@ const setMainImage = (projectId: string, imageIndex: number) => {
     padding: 16px 16px 0 16px;
   }
   
-  // 工具和媒体区域全宽
+  // 工具、媒体和主题区域全宽
   #tools,
-  #media {
+  #media,
+  #themes {
     @media (max-width: 768px) {
       margin-left: -16px;
       margin-right: -16px;

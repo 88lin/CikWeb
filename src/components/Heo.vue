@@ -779,10 +779,10 @@ $luxe-light: #F3F4F6;
           border-top: 1px solid rgba(139, 92, 246, 0.1);
           
           .author-avatar {
-            width: 28px;
-            height: 28px;
-            border: 2px solid white;
-            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.15);
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            object-fit: contain;
           }
           
           .author-info {
@@ -942,22 +942,15 @@ $luxe-light: #F3F4F6;
   margin-left: 8px;
   
   .author-avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid white;
-    box-shadow: 
-      0 3px 6px rgba(0, 0, 0, 0.08),
-      0 0 0 1px rgba(139, 92, 246, 0.08);
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    object-fit: contain;
     transition: all 0.3s ease;
     flex-shrink: 0;
     
     &:hover {
-      transform: scale(1.05);
-      box-shadow: 
-        0 4px 8px rgba(139, 92, 246, 0.15),
-        0 0 0 2px rgba(139, 92, 246, 0.12);
+      transform: scale(1.08);
     }
   }
   

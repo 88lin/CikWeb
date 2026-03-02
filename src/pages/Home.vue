@@ -16,6 +16,13 @@
       </div>
     </ScrollReveal>
     
+    <!-- 推荐文章 - 向上淡入 -->
+    <ScrollReveal animation="fade-up">
+      <div id="recommend">
+        <RecommendPosts />
+      </div>
+    </ScrollReveal>
+    
     <!-- 项目展示（内含工具推荐和媒体推荐） - 向上淡入 -->
     <ScrollReveal animation="fade-up">
       <ProjectShow />
@@ -26,6 +33,7 @@
 <script setup lang="ts">
 import Heo from '@/components/Heo.vue'
 import FeaturedCarousel from '@/components/FeaturedCarousel.vue'
+import RecommendPosts from '@/components/RecommendPosts.vue'
 import ProjectShow from '@/components/ProjectShow.vue'
 import ScrollReveal from '@/components/ScrollReveal.vue'
 </script>

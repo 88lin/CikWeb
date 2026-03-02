@@ -21,10 +21,12 @@ declare module 'vue' {
     MediaSection: typeof import('./../components/MediaSection.vue')['default']
     ProjectShow: typeof import('./../components/ProjectShow.vue')['default']
     ProjectShowThird: typeof import('./../components/ProjectShowThird.vue')['default']
+    RecommendPosts: typeof import('./../components/RecommendPosts.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     ScrollReveal: typeof import('./../components/ScrollReveal.vue')['default']
     SponsorsSection: typeof import('./../components/SponsorsSection.vue')['default']
+    ThemesSection: typeof import('./../components/ThemesSection.vue')['default']
     ToolsSection: typeof import('./../components/ToolsSection.vue')['default']
   }
 }

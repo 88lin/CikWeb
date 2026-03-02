@@ -148,7 +148,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   { name: '推荐', anchor: 'featured' },
   { name: '工具', anchor: 'tools' },
-  { name: '媒体', anchor: 'media' },
+  { name: '主题', anchor: 'themes' },
   { name: '文章', anchor: 'posts' },
   { name: '博客', external: true, url: 'https://blog.cikcc.com' },
 ]
@@ -269,6 +269,7 @@ onUnmounted(() => {
   padding: 16px 0;
   pointer-events: none;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
 
   // 手机端隐藏桌面导航
   @media (max-width: $breakpoint-md) {
@@ -278,12 +279,10 @@ onUnmounted(() => {
 
 // 胶囊导航框 - 简洁白色风格
 .nav-capsule {
-  max-width: 420px;
-  margin: 0 auto;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0;
-  padding: 6px;
+  gap: 6px;
+  padding: 8px;
   position: relative;
   
   // 纯白背景
@@ -304,16 +303,15 @@ onUnmounted(() => {
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 
   &:hover {
-    transform: scale(1.01);
+    transform: translateY(-3px) scale(1.02);
     box-shadow: 
-      0 8px 32px rgba(139, 92, 246, 0.12),
-      0 4px 12px rgba(0, 0, 0, 0.06);
-    border-color: rgba(139, 92, 246, 0.15);
+      0 12px 40px rgba(139, 92, 246, 0.18),
+      0 6px 16px rgba(0, 0, 0, 0.08);
+    border-color: rgba(139, 92, 246, 0.2);
   }
 
   @media (max-width: $breakpoint-md) {
-    max-width: calc(100% - 32px);
-    padding: 8px 10px 8px 8px;
+    padding: 8px;
   }
 }
 
@@ -322,30 +320,24 @@ onUnmounted(() => {
   display: none;
 }
 
-// Logo - 简约圆形
+// Logo
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: #f8fafc;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  width: 44px;
+  height: 44px;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 
   &:hover {
-    transform: scale(1.08) rotate(3deg);
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
-    border-color: rgba(139, 92, 246, 0.25);
+    transform: scale(1.08);
   }
   
   img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
     transition: all 0.3s ease;
   }
 }
@@ -353,9 +345,7 @@ onUnmounted(() => {
 // 导航菜单
 .nav-menu {
   display: flex;
-  gap: 0;
-  flex: 1;
-  justify-content: center;
+  gap: 6px;
   align-items: center;
 
   @media (max-width: $breakpoint-md) {
@@ -366,7 +356,6 @@ onUnmounted(() => {
     width: calc(100% - 32px);
     max-width: 320px;
     flex-direction: column;
-    gap: 4px;
     background: white;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -395,10 +384,10 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: #374151;
-  padding: 8px 16px;
+  padding: 10px 20px;
   border-radius: 100px;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   white-space: nowrap;
@@ -443,11 +432,9 @@ onUnmounted(() => {
   }
 }
 
-// 操作区域
+// 操作区域 - 隐藏，不占用空间
 .nav-actions {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
+  display: none;
 }
 
 // 菜单切换按钮 - 简洁风格
@@ -609,14 +596,10 @@ onUnmounted(() => {
 .mobile-avatar {
   width: 46px;
   height: 46px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  border: 2px solid white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   
   &:active {
@@ -624,10 +607,9 @@ onUnmounted(() => {
   }
 
   img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
   }
 }
 

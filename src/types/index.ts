@@ -35,6 +35,15 @@ export interface Tool {
   category?: string
 }
 
+// 主题类型
+export interface Theme {
+  name: string
+  description: string
+  url: string
+  logo?: string
+  tag: string  // 标签，如"免费"、"付费"、"开源"等
+}
+
 // 博客文章类型
 export interface Post {
   title: string

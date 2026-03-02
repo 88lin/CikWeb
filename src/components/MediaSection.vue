@@ -177,24 +177,19 @@ import { mediaList } from '@/data/media'
   }
 }
 
-// 图标容器 - 圆形
+// 图标容器
 .media-icon-wrapper {
   flex-shrink: 0;
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%);
-  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.1);
   
   @media (max-width: 560px) {
-    width: 48px;
-    height: 48px;
-    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.1);
-    border: 1px solid rgba(139, 92, 246, 0.08);
+    width: 44px;
+    height: 44px;
   }
 }
 
@@ -209,10 +204,17 @@ import { mediaList } from '@/data/media'
 }
 
 .media-logo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  
+  @media (max-width: 560px) {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
 }
 
 .media-icon-text {
