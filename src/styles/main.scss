@@ -1,0 +1,326 @@
+/*
+ * @Description: 全局主样式文件
+ * @Author: Cik
+ * @Date: 2026-02-27
+ */
+
+// Tailwind CSS 和 DaisyUI
+@import "tailwindcss";
+@plugin "daisyui";
+
+// 自定义 SCSS 变量
+@import './variables.scss';
+
+// 主题变量定义
+:root {
+  // 浅色主题（默认）
+  --bg-primary: #{$background-white};
+  --bg-secondary: #{$background-color-base};
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+  --text-regular: #{$text-regular};
+  --border-color: #{$border-color-base};
+  --shadow-base: #{$box-shadow-base};
+}
+
+// 全局重置
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, -apple-system, BlinkMacSystemFont,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: $font-size-base;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+// 链接样式
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+// 图片响应式
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// 容器样式
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 0 $spacing-md;
+  }
+}
+
+// 页面标题样式
+.page-title {
+  font-size: $font-size-3xl;
+  font-weight: bold;
+  color: $text-primary;
+  margin-bottom: $spacing-xl;
+  text-align: center;
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: $font-size-2xl;
+    margin-bottom: $spacing-lg;
+  }
+}
+
+// 卡片样式
+.card {
+  background: $background-white;
+  border-radius: $border-radius-large;
+  box-shadow: $box-shadow-base;
+  padding: $spacing-lg;
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: $box-shadow-light;
+    transform: translateY(-2px);
+  }
+}
+
+// 按钮样式增强
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-sm $spacing-lg;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  border-radius: $border-radius-base;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+
+  &-primary {
+    background: $primary-color;
+    color: white;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+
+  &-secondary {
+    background: $background-color-base;
+    color: $text-primary;
+
+    &:hover {
+      background: darken($background-color-base, 5%);
+    }
+  }
+
+  &-large {
+    padding: $spacing-md $spacing-xl;
+    font-size: $font-size-base;
+  }
+
+  &-small {
+    padding: $spacing-xs $spacing-md;
+    font-size: $font-size-xs;
+  }
+}
+
+// 节样式
+.section {
+  padding: $spacing-xl * 2 0;
+
+  @media (max-width: $breakpoint-sm) {
+    padding: $spacing-xl 0;
+  }
+
+  &-title {
+    font-size: $font-size-2xl;
+    font-weight: bold;
+    color: $text-primary;
+    margin-bottom: $spacing-xl;
+    text-align: center;
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-lg;
+    }
+  }
+
+  &-subtitle {
+    font-size: $font-size-base;
+    color: $text-secondary;
+    text-align: center;
+    margin-top: -$spacing-lg;
+    margin-bottom: $spacing-xl;
+  }
+}
+
+// 网格布局
+.grid {
+  display: grid;
+  gap: $spacing-lg;
+
+  &-2 {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-3 {
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-4 {
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: $breakpoint-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// 文本工具类
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.text-secondary {
+  color: $text-secondary;
+}
+
+.text-muted {
+  color: $text-placeholder;
+}
+
+// 间距工具类
+.mt-0 {
+  margin-top: 0;
+}
+.mt-1 {
+  margin-top: $spacing-sm;
+}
+.mt-2 {
+  margin-top: $spacing-md;
+}
+.mt-3 {
+  margin-top: $spacing-lg;
+}
+.mt-4 {
+  margin-top: $spacing-xl;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+.mb-1 {
+  margin-bottom: $spacing-sm;
+}
+.mb-2 {
+  margin-bottom: $spacing-md;
+}
+.mb-3 {
+  margin-bottom: $spacing-lg;
+}
+.mb-4 {
+  margin-bottom: $spacing-xl;
+}
+
+// 动画
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-in-up {
+  animation: slideInUp 0.5s ease-out;
+}
+
+// 页面过渡
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
