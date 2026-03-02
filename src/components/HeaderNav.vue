@@ -135,8 +135,17 @@ const isScrolled = ref(false)
 const activeAnchor = ref('')
 const showGreeting = ref(false)
 
+// 导航项类型定义
+interface NavItem {
+  name: string
+  anchor?: string
+  path?: string
+  external?: boolean
+  url?: string
+}
+
 // 导航项配置：anchor 表示锚点导航，external 表示外部链接，path 表示路由导航
-const navItems = [
+const navItems: NavItem[] = [
   { name: '推荐', anchor: 'featured' },
   { name: '工具', anchor: 'tools' },
   { name: '媒体', anchor: 'media' },
