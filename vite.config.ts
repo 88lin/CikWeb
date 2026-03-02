@@ -109,7 +109,7 @@ export default defineConfig({
     onBeforePageRender(route, indexHTML) {
       // 自定义 404 页面
       if (route === '/404') {
-        return indexHTML.replace('<title>CikWeb Pro</title>', '<title>404 - 页面未找到</title>')
+        return indexHTML.replace('<title>CikWeb</title>', '<title>404 - 页面未找到</title>')
       }
       return indexHTML
     }

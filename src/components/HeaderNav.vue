@@ -270,10 +270,6 @@ onUnmounted(() => {
   pointer-events: none;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  &.scrolled {
-    padding: 10px 0;
-  }
-
   // 手机端隐藏桌面导航
   @media (max-width: $breakpoint-md) {
     display: none;
@@ -282,12 +278,12 @@ onUnmounted(() => {
 
 // 胶囊导航框 - 简洁白色风格
 .nav-capsule {
-  max-width: 520px;
+  max-width: 420px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px;
+  gap: 0;
+  padding: 6px;
   position: relative;
   
   // 纯白背景
@@ -308,16 +304,11 @@ onUnmounted(() => {
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
     box-shadow: 
-      0 8px 32px rgba(139, 92, 246, 0.15),
-      0 4px 12px rgba(0, 0, 0, 0.08);
-    border-color: rgba(139, 92, 246, 0.2);
-  }
-
-  .scrolled & {
-    max-width: 480px;
-    padding: 6px;
+      0 8px 32px rgba(139, 92, 246, 0.12),
+      0 4px 12px rgba(0, 0, 0, 0.06);
+    border-color: rgba(139, 92, 246, 0.15);
   }
 
   @media (max-width: $breakpoint-md) {
@@ -337,42 +328,32 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: #f8fafc;
   border: 1px solid rgba(0, 0, 0, 0.06);
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  
-  .scrolled & {
-    width: 44px;
-    height: 44px;
-  }
 
   &:hover {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 4px 16px rgba(139, 92, 246, 0.25);
-    border-color: rgba(139, 92, 246, 0.3);
+    transform: scale(1.08) rotate(3deg);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+    border-color: rgba(139, 92, 246, 0.25);
   }
   
   img {
-    width: 38px;
-    height: 38px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     object-fit: cover;
     transition: all 0.3s ease;
-    
-    .scrolled & {
-      width: 34px;
-      height: 34px;
-    }
   }
 }
 
 // 导航菜单
 .nav-menu {
   display: flex;
-  gap: 4px;
+  gap: 0;
   flex: 1;
   justify-content: center;
   align-items: center;
@@ -414,10 +395,10 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   color: #374151;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 100px;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   white-space: nowrap;
@@ -428,12 +409,6 @@ onUnmounted(() => {
     position: relative;
   }
   
-  // 滚动时缩小 padding
-  .scrolled & {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-
   &:hover {
     color: #8b5cf6;
     background: rgba(139, 92, 246, 0.08);
@@ -472,7 +447,6 @@ onUnmounted(() => {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 4px;
   flex-shrink: 0;
 }
 
@@ -546,7 +520,7 @@ onUnmounted(() => {
   @media (max-width: $breakpoint-md) {
     display: block;
     position: fixed;
-    bottom: 24px;
+    bottom: 90px;
     right: 20px;
     z-index: 1000;
   }

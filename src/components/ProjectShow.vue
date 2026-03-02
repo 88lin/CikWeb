@@ -96,6 +96,10 @@
       <div v-if="index === 1" id="posts">
         <LatestPosts />
       </div>
+      <!-- 在最新文章之后插入联系组件 -->
+      <div v-if="index === 1" id="contact">
+        <ContactSection />
+      </div>
     </template>
   </section>
 </template>
@@ -106,6 +110,7 @@ import { projectShowData } from '@/data/projectshow'
 import ToolsSection from '@/components/ToolsSection.vue'
 import MediaSection from '@/components/MediaSection.vue'
 import LatestPosts from '@/components/LatestPosts.vue'
+import ContactSection from '@/components/ContactSection.vue'
 
 const displayProjects = computed(() => projectShowData.filter((p) => p.featured).slice(0, 2))
 

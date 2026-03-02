@@ -33,6 +33,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 body {
@@ -46,7 +47,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.3s ease, color 0.3s ease;
-  overflow-x: hidden;
+  overflow: visible;
+}
+
+#app {
+  min-height: 100vh;
+  overflow: visible;
 }
 
 // 链接样式

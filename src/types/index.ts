@@ -16,14 +16,6 @@ export interface Project {
   featured?: boolean
 }
 
-// 友情链接类型
-export interface Link {
-  name: string
-  url: string
-  avatar: string
-  description: string
-}
-
 // 社交媒体类型
 export interface Media {
   name: string
@@ -41,15 +33,6 @@ export interface Tool {
   icon?: string
   logo?: string
   category?: string
-}
-
-// 赞助者类型
-export interface Sponsor {
-  name: string
-  avatar?: string
-  amount: number
-  date: string
-  message?: string
 }
 
 // 博客文章类型

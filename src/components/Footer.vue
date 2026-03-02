@@ -27,13 +27,6 @@
         <div class="footer-brand">
           <h3 class="brand-name">{{ footerData.brandName }}</h3>
           <p class="brand-slogan">{{ footerData.slogan }}</p>
-          <a :href="`mailto:${footerData.email}`" class="email-link">
-            <svg class="email-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
-              <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
-            </svg>
-            <span>{{ footerData.email }}</span>
-          </a>
           <!-- 手机端隐私政策 -->
           <router-link to="/privacy" class="mobile-privacy-link">隐私政策</router-link>
           <!-- 手机端版权信息 -->
@@ -58,6 +51,21 @@
           </div>
           <router-link to="/privacy" class="privacy-link">隐私政策</router-link>
         </div>
+
+        <!-- 技术栈徽章 -->
+        <div class="tech-badges">
+          <img src="https://img.shields.io/badge/Vue-3.3-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue" />
+          <img src="https://img.shields.io/badge/TypeScript-5.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+          <img src="https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+          <img src="https://img.shields.io/badge/Tailwind_CSS-4.2-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+          <img src="https://img.shields.io/badge/Pinia-2.1-ffd859?style=for-the-badge&logo=vue.js&logoColor=white" alt="Pinia" />
+          <img src="https://img.shields.io/badge/Sass-1.69-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass" />
+          <img src="https://img.shields.io/badge/SSG-Vite_SSG-8B5CF6?style=for-the-badge&logo=vite&logoColor=white" alt="Vite SSG" />
+          <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
+          <a href="https://github.com/cikheo/CikWeb" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/badge/GitHub-CikWeb-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+          </a>
+        </div>
       </div>
     </div>
   </footer>
@@ -74,7 +82,6 @@ const footerData = reactive({
   slogan: '探索技术的边界，记录生活的点滴。',
   startYear: 2025,
   author: 'Cik',
-  email: 'cikheo@qq.com',
   icpNumber: '陇ICP备2023002242号-9',
   icpLink: 'https://beian.miit.gov.cn/'
 })
@@ -188,28 +195,8 @@ const currentYear = computed(() => new Date().getFullYear())
 .brand-slogan {
   font-size: 0.95rem;
   color: #64748b;
-  margin: 0 0 12px 0;
+  margin: 0;
   line-height: 1.6;
-}
-
-.email-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.9rem;
-  color: #71717a;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  
-  &:hover {
-    color: #E8B4B8;
-  }
-}
-
-.email-icon {
-  width: 1.1em;
-  height: 1.1em;
-  flex-shrink: 0;
 }
 
 // 手机端隐私政策链接
@@ -308,6 +295,40 @@ const currentYear = computed(() => new Date().getFullYear())
     color: #E8B4B8;
   }
 }
+
+// ==================== 技术栈徽章 ====================
+
+.tech-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  
+  a {
+    display: flex;
+    line-height: 0;
+  }
+  
+  img {
+    height: auto;
+    max-height: 22px;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+  }
+  
+  @media (max-width: 640px) {
+    margin-top: 16px;
+    gap: 4px;
+    
+    img {
+      max-height: 20px;
+    }
+  }
+}
 </style>
 
 <!-- 非scoped样式：根据不同页面适配水波纹颜色 -->
@@ -320,7 +341,7 @@ const currentYear = computed(() => new Date().getFullYear())
   .footer-divider {
     background: linear-gradient(90deg, transparent 0%, rgba(139, 92, 246, 0.35) 20%, rgba(139, 92, 246, 0.35) 80%, transparent 100%);
   }
-  .email-link:hover, .icp-link:hover, .privacy-link:hover { color: #8b5cf6; }
+  .icp-link:hover, .privacy-link:hover { color: #8b5cf6; }
 }
 
 // 微信公众号页面 - 微信绿主题
@@ -331,7 +352,7 @@ const currentYear = computed(() => new Date().getFullYear())
   .footer-divider {
     background: linear-gradient(90deg, transparent 0%, rgba(7, 193, 96, 0.35) 20%, rgba(7, 193, 96, 0.35) 80%, transparent 100%);
   }
-  .email-link:hover, .icp-link:hover, .privacy-link:hover { color: #07c160; }
+  .icp-link:hover, .privacy-link:hover { color: #07c160; }
 }
 
 // 博客页面 - 紫蓝色主题
@@ -342,7 +363,7 @@ const currentYear = computed(() => new Date().getFullYear())
   .footer-divider {
     background: linear-gradient(90deg, transparent 0%, rgba(139, 92, 246, 0.35) 20%, rgba(139, 92, 246, 0.35) 80%, transparent 100%);
   }
-  .email-link:hover, .icp-link:hover, .privacy-link:hover { color: #8b5cf6; }
+  .icp-link:hover, .privacy-link:hover { color: #8b5cf6; }
 }
 
 // 404页面 - 蓝色主题
@@ -353,7 +374,7 @@ const currentYear = computed(() => new Date().getFullYear())
   .footer-divider {
     background: linear-gradient(90deg, transparent 0%, rgba(64, 158, 255, 0.35) 20%, rgba(64, 158, 255, 0.35) 80%, transparent 100%);
   }
-  .email-link:hover, .icp-link:hover, .privacy-link:hover { color: #409eff; }
+  .icp-link:hover, .privacy-link:hover { color: #409eff; }
 }
 
 // 导航页面 - 靛蓝紫色主题
@@ -364,6 +385,6 @@ const currentYear = computed(() => new Date().getFullYear())
   .footer-divider {
     background: linear-gradient(90deg, transparent 0%, rgba(99, 102, 241, 0.35) 20%, rgba(99, 102, 241, 0.35) 80%, transparent 100%);
   }
-  .email-link:hover, .icp-link:hover, .privacy-link:hover { color: #6366f1; }
+  .icp-link:hover, .privacy-link:hover { color: #6366f1; }
 }
 </style>

@@ -35,15 +35,7 @@ export const routes: RouteRecordRaw[] = [
       keywords: '关于, 个人简介, 联系方式',
     },
   },
-  {
-    path: '/sponsor',
-    name: 'Sponsor',
-    component: () => import('@/pages/Sponsor.vue'),
-    meta: {
-      description: '如果这个项目对你有帮助，欢迎赞助支持',
-      keywords: '赞助, 支持, 捐赠',
-    },
-  },
+
   {
     path: '/wechat',
     name: 'WeChat',

@@ -20,16 +20,6 @@
     <ScrollReveal animation="fade-up">
       <ProjectShow />
     </ScrollReveal>
-    
-    <!-- 友情链接 - 向上淡入 -->
-    <ScrollReveal animation="fade-up">
-      <LinksSection />
-    </ScrollReveal>
-    
-    <!-- 赞助支持 - 缩放淡入 -->
-    <ScrollReveal animation="zoom">
-      <SponsorsSection />
-    </ScrollReveal>
   </div>
 </template>
 
@@ -37,8 +27,6 @@
 import Heo from '@/components/Heo.vue'
 import FeaturedCarousel from '@/components/FeaturedCarousel.vue'
 import ProjectShow from '@/components/ProjectShow.vue'
-import LinksSection from '@/components/LinksSection.vue'
-import SponsorsSection from '@/components/SponsorsSection.vue'
 import ScrollReveal from '@/components/ScrollReveal.vue'
 </script>
 

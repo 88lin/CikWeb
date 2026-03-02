@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     BackToTop: typeof import('./../components/BackToTop.vue')['default']
     BlogList: typeof import('./../components/BlogList.vue')['default']
+    ContactSection: typeof import('./../components/ContactSection.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     FeaturedCarousel: typeof import('./../components/FeaturedCarousel.vue')['default']

@@ -1,6 +1,6 @@
 {
-  "name": "CikWeb Pro",
-  "version": "2.3.1",
+  "name": "CikWeb",
+  "version": "2.6.1",
   "description": "静态多业务个人主页主题 - 基于 Vue 3 + TypeScript + Vite 构建",
   "type": "module",
   "scripts": {
@@ -60,7 +60,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cikheo/CikWeb-Pro.git"
+    "url": "https://github.com/cikheo/CikWeb.git"
   },
   "keywords": [
     "vue3",

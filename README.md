@@ -1,16 +1,16 @@
 <div align="center">
-  <img src="public/logo.png" alt="CikWeb Pro Logo" width="80" height="80">
-  <h1>CikWeb Pro</h1>
-  <p><strong>🎨 静态多业务个人主页主题</strong></p>
-  <p>基于 Vue 3 + TypeScript + Vite 构建的现代化个人主页解决方案</p>
+  <img src="public/logo.png" alt="CikWeb Logo" width="80" height="80">
+  <h1>CikWeb</h1>
+  <p><strong>🎨 现代化静态个人主页</strong></p>
+  <p>基于 Vue 3 + TypeScript + Vite + Tailwind CSS 构建的简约个人主页解决方案</p>
 
   ![Vue](https://img.shields.io/badge/Vue-3.3+-4FC08D?style=flat-square&logo=vue.js&logoColor=white)
   ![TypeScript](https://img.shields.io/badge/TypeScript-5.3+-3178C6?style=flat-square&logo=typescript&logoColor=white)
   ![Vite](https://img.shields.io/badge/Vite-5.0+-646CFF?style=flat-square&logo=vite&logoColor=white)
-  ![Element Plus](https://img.shields.io/badge/Element_Plus-2.3+-409EFF?style=flat-square&logo=element&logoColor=white)
+  ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0+-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
   ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-  [在线演示](https://cikcc.com) · [问题反馈](https://github.com/cikheo/CikWeb-Pro/issues) · [功能建议](https://github.com/cikheo/CikWeb-Pro/discussions)
+  [在线演示](https://cikcc.com) · [问题反馈](https://github.com/cikheo/CikWeb/issues) · [功能建议](https://github.com/cikheo/CikWeb/discussions)
 
 </div>
 
@@ -25,7 +25,6 @@
 - [功能模块](#-功能模块)
 - [配置指南](#️-配置指南)
 - [部署指南](#-部署指南)
-- [开发规范](#-开发规范)
 - [常见问题](#-常见问题)
 - [许可证](#-许可证)
 
@@ -33,37 +32,38 @@
 
 ## 📋 项目简介
 
-CikWeb Pro 是一款专为开发者和创作者设计的现代化个人主页主题。它不仅仅是一个简单的个人介绍页面，更是一个功能完整的多业务展示平台，集成了博客、项目展示、工具推荐、赞助支持等多个模块。
+CikWeb 是一款专为开发者和创作者设计的现代化个人主页。简约而不简单，集成了项目展示、工具推荐、社交媒体、最新文章、联系方式等核心模块。
 
-### 为什么选择 CikWeb Pro？
+### 为什么选择 CikWeb？
 
 | 痛点 | 解决方案 |
 |------|----------|
-| 传统 SPA 应用 SEO 差 | 全站静态化预渲染，对搜索引擎友好 |
-| 部署配置复杂 | 子目录索引模式，零配置即可部署 |
-| 响应式适配困难 | 内置完善的移动端适配，4K 分辨率优化 |
-| 代码维护困难 | 规范的工程化配置 + 全中文注释 |
+| 传统 SPA 应用 SEO 差 | SSG 静态站点生成，对搜索引擎友好 |
+| 部署配置复杂 | 纯静态文件，零配置即可部署 |
+| 响应式适配困难 | 内置完善的移动端/桌面端适配 |
+| 代码维护困难 | 模块化组件 + TypeScript 类型安全 |
 | 社交分享无预览 | 内置 Open Graph + Twitter Card 支持 |
 
 ---
 
 ## ✨ 核心特性
 
-### 🚀 开发体验
+### 🚀 技术栈
 
-- **⚡️ 极速开发** - Vue 3 + Vite 5 提供毫秒级热更新
-- **💎 类型安全** - 全量 TypeScript 支持，严格的类型检查
-- **🎨 组件丰富** - Element Plus 提供优雅的 UI 组件
-- **🍍 状态管理** - Pinia 实现直观的响应式状态管理
-- **📦 自动导入** - 组件与 API 自动按需导入
+- **⚡️ Vue 3 + Vite 5** - 毫秒级热更新，极速开发体验
+- **💎 TypeScript** - 全量类型支持，代码更健壮
+- **🎨 Tailwind CSS** - 原子化 CSS，快速构建 UI
+- **🍍 Pinia** - 直观的响应式状态管理
+- **📦 自动导入** - 组件与 API 按需自动导入
+- **💻 Vite SSG** - 静态站点生成，SEO 友好
 
 ### 🎯 功能亮点
 
-- **📱 响应式设计** - 完美适配移动端、平板、桌面端及 4K 显示器
-- **🔗 锚点导航** - 导航栏锚点跳转，平滑滚动体验
-- **🌊 水波纹页脚** - 页脚根据页面主题自动适配颜色
-- **💰 赞助系统** - 内置赞助者展示与 VIP 高亮功能
-- **📡 RSS 集成** - 自动抓取并展示博客最新文章
+- **📱 响应式设计** - 完美适配移动端与桌面端
+- **🔗 锚点导航** - 胶囊式导航栏，平滑滚动跳转
+- **🌊 动态页脚** - 水波纹动画，根据页面主题适配
+- **📡 RSS 集成** - 自动抓取展示博客最新文章
+- **📞 联系组件** - 集成 Email、GitHub、微信等联系方式
 
 ---
 
@@ -80,8 +80,8 @@ CikWeb Pro 是一款专为开发者和创作者设计的现代化个人主页主
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/cikheo/CikWeb-Pro.git
-cd CikWeb-Pro
+git clone https://github.com/cikheo/CikWeb.git
+cd CikWeb
 
 # 2. 安装依赖（推荐使用 pnpm）
 pnpm install
@@ -114,25 +114,24 @@ npm run dev
 ## 📂 项目结构
 
 ```
-CikWeb Pro/
+CikWeb/
 ├── public/                    # 公共静态资源
 │   ├── logo.png              # 网站 Logo
-│   └── favicon.ico           # 网站图标
+│   └── favicon.png           # 网站图标
 │
 ├── src/
 │   ├── assets/img/           # 图片资源
 │   │
 │   ├── components/           # 可复用组件
-│   │   ├── HeaderNav.vue     # 悬浮胶囊导航栏
-│   │   ├── Heo.vue           # 视觉引导区（首屏）
+│   │   ├── HeaderNav.vue     # 胶囊式导航栏（桌面端+移动端）
+│   │   ├── Heo.vue           # 首屏视觉引导区
 │   │   ├── FeaturedCarousel.vue  # 精选项目轮播
-│   │   ├── ProjectShow.vue   # 项目深度展示
-│   │   ├── ToolsSection.vue  # 工具推荐
+│   │   ├── ProjectShow.vue   # 项目深度展示容器
+│   │   ├── ToolsSection.vue  # 工具推荐模块
 │   │   ├── MediaSection.vue  # 社交媒体展示
 │   │   ├── LatestPosts.vue   # 最新文章（RSS）
-│   │   ├── LinksSection.vue  # 友情链接
-│   │   ├── SponsorsSection.vue   # 赞助者展示
-│   │   ├── Footer.vue        # 水波纹页脚
+│   │   ├── ContactSection.vue # 联系方式组件
+│   │   ├── Footer.vue        # 水波纹动态页脚
 │   │   ├── BackToTop.vue     # 返回顶部按钮
 │   │   └── ScrollReveal.vue  # 滚动动画组件
 │   │
@@ -140,15 +139,12 @@ CikWeb Pro/
 │   │   ├── featuredcarousel.ts   # 精选轮播数据
 │   │   ├── projectshow.ts    # 项目展示数据
 │   │   ├── tools.ts          # 工具推荐数据
-│   │   ├── media.ts          # 社交媒体数据
-│   │   ├── links.ts          # 友情链接数据
-│   │   └── sponsors.ts       # 赞助者数据
+│   │   └── media.ts          # 社交媒体数据
 │   │
 │   ├── pages/                # 页面组件
 │   │   ├── Home.vue          # 首页
 │   │   ├── Blog.vue          # 博客页
 │   │   ├── About.vue         # 关于页
-│   │   ├── Sponsor.vue       # 赞助页
 │   │   ├── WeChat.vue        # 微信公众号
 │   │   ├── Privacy.vue       # 隐私政策
 │   │   └── NotFound.vue      # 404 页面
@@ -156,13 +152,13 @@ CikWeb Pro/
 │   ├── router/index.ts       # 路由配置
 │   ├── stores/               # Pinia 状态管理
 │   ├── styles/               # 全局样式
-│   │   ├── main.scss         # 主样式
-│   │   └── variables.scss    # SCSS 变量
+│   │   ├── main.scss         # 主样式文件
+│   │   └── variables.scss    # SCSS 变量定义
 │   └── utils/                # 工具函数
 │
 ├── index.html                # HTML 入口
 ├── vite.config.ts            # Vite 配置
-├── tailwind.config.js        # Tailwind 配置
+├── tailwind.config.js        # Tailwind CSS 配置
 └── tsconfig.json             # TypeScript 配置
 ```
 
@@ -176,8 +172,7 @@ CikWeb Pro/
 |------|------|------|
 | `/` | 首页 | 聚合展示所有核心模块 |
 | `/blog` | 博客 | RSS 订阅文章列表 |
-| `/about` | 关于 | 个人简介与联系方式 |
-| `/sponsor` | 赞助 | 赞助支持页面 |
+| `/about` | 关于 | 个人简介页面 |
 | `/wechat` | 微信 | 微信公众号引流 |
 | `/privacy` | 隐私 | 隐私政策声明 |
 
@@ -187,12 +182,14 @@ CikWeb Pro/
 
 1. **Heo 视觉引导区** - 首屏展示，包含标题、描述与 CTA 按钮
 2. **FeaturedCarousel** - 精选项目轮播展示
-3. **ProjectShow** - 项目深度展示（内含工具推荐、媒体推荐、最新文章）
-4. **LinksSection** - 友情链接
-5. **SponsorsSection** - 赞助者展示
-6. **Footer** - 水波纹动态页脚
+3. **ProjectShow** - 项目深度展示容器
+   - ToolsSection - 工具推荐
+   - MediaSection - 社交媒体
+   - LatestPosts - 最新文章
+   - ContactSection - 联系方式
+4. **Footer** - 水波纹动态页脚
 
-### 导航栏锚点
+### 导航栏配置
 
 | 按钮 | 目标 | 类型 |
 |------|------|------|
@@ -200,7 +197,7 @@ CikWeb Pro/
 | 工具 | #tools | 锚点跳转 |
 | 媒体 | #media | 锚点跳转 |
 | 文章 | #posts | 锚点跳转 |
-| 博客 | blog.cikcc.com | 外部链接（始终高亮） |
+| 博客 | 外部链接 | 始终高亮显示 |
 
 ---
 
@@ -262,33 +259,6 @@ export const mediaList = [
     icon: 'fab fa-github',  // FontAwesome 图标
     logo: '/path/to/logo.png',  // 自定义 logo（优先）
     followers: '1.2k'  // 可选
-  }
-]
-```
-
-#### 友情链接 (`links.ts`)
-
-```typescript
-export const links = [
-  {
-    name: '链接名称',
-    url: 'https://...',
-    avatar: 'https://avatar-url',
-    description: '链接描述',
-    tag: '标签'  // 可选
-  }
-]
-```
-
-#### 赞助者 (`sponsors.ts`)
-
-```typescript
-export const sponsors = [
-  {
-    name: '昵称',
-    amount: 50,  // 金额 >= 20 时 VIP 高亮
-    date: '2026-01-01',
-    message: '留言内容'  // 可选
   }
 ]
 ```
@@ -370,37 +340,6 @@ server {
 
 ---
 
-## 🛠 开发规范
-
-### 文件注释
-
-```typescript
-/*
- * @Description: 文件功能描述
- * @Author: 作者名
- * @Date: YYYY-MM-DD
- */
-```
-
-### 命名规范
-
-| 类型 | 规范 | 示例 |
-|------|------|------|
-| 组件文件 | PascalCase | `HeaderNav.vue` |
-| 数据文件 | lowercase | `sponsors.ts` |
-| CSS 类名 | kebab-case | `nav-item` |
-
-### 提交规范
-
-```bash
-feat(component): 添加新功能
-fix(page): 修复 Bug
-docs(readme): 更新文档
-style: 代码格式调整
-```
-
----
-
 ## ❓ 常见问题
 
 **Q: 开发服务器启动失败？**
@@ -433,6 +372,6 @@ Copyright (c) 2026 Cik
 ---
 
 <div align="center">
-  <p>如果这个项目对你有帮助，请给一个 ⭐️ Star 支持一下！</p>
+  <p>如果这个项目对你有帮助，请给一个 ⭐ Star 支持一下！</p>
   <p>Made with ❤️ by <a href="https://cikcc.com">Cik</a></p>
 </div>

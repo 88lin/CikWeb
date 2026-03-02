@@ -20,7 +20,7 @@ const showBrandInfo = () => {
     'border-radius: 4px',
   ].join(';')
 
-  console.log('%c CikWeb Pro ', styles)
+  console.log('%c CikWeb ', styles)
   console.log('基于 Vue 3 + TypeScript + Vite 构建')
   console.log('GitHub: https://github.com/cikheo/CikWeb')
   console.log('作者: Cik (https://cikcc.com)')
