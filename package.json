@@ -1,6 +1,6 @@
 {
   "name": "CikWeb",
-  "version": "3.5.1",
+  "version": "3.6.1",
   "description": "静态多业务个人主页主题 - 基于 Vue 3 + TypeScript + Vite 构建",
   "type": "module",
   "scripts": {
@@ -57,7 +57,7 @@
     "email": "cikheo@cikcc.com",
     "url": "https://cikcc.com"
   },
-  "license": "MIT",
+  "license": "GPL-3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/cikheo/CikWeb.git"

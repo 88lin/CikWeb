@@ -10,6 +10,7 @@ import type { Media } from '@/types'
 import githubLogo from '@/assets/img/github.svg'
 import wechatLogo from '@/assets/img/wechat.svg'
 import bilibiliLogo from '@/assets/img/Bilibili.svg'
+import giteeLogo from '@/assets/img/gitee.svg'
 
 export const mediaList: Media[] = [
   {
@@ -29,6 +30,12 @@ export const mediaList: Media[] = [
     logo: bilibiliLogo,
     url: 'https://space.bilibili.com/1212627088',
     description: '视频教程与日常分享',
+  },
+  {
+    name: 'Gitee',
+    logo: giteeLogo,
+    url: 'https://gitee.com/cikcc/cikweb',
+    description: '国内代码托管与协作',
   },
 ]
 

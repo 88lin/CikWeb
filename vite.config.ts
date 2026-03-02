@@ -11,10 +11,12 @@ import { fileURLToPath, URL } from 'node:url'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import welcomePlugin from './scripts/welcome'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    welcomePlugin(),
     tailwindcss(),
     vue(),
     // 自动导入 Vue 和组件库 API

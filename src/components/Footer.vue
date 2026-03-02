@@ -65,6 +65,9 @@
           <a href="https://github.com/cikheo/CikWeb" target="_blank" rel="noopener noreferrer">
             <img :src="badgeGithub" alt="GitHub" />
           </a>
+          <a href="https://gitee.com/cikcc/cikweb" target="_blank" rel="noopener noreferrer">
+            <img :src="badgeGitee" alt="Gitee" />
+          </a>
         </div>
       </div>
     </div>
@@ -84,6 +87,7 @@ import badgeSass from '@/assets/img/badges/sass.svg'
 import badgeSsg from '@/assets/img/badges/ssg.svg'
 import badgeLicense from '@/assets/img/badges/license.svg'
 import badgeGithub from '@/assets/img/badges/github.svg'
+import badgeGitee from '@/assets/img/badges/gitee.svg'
 
 // ==================== 数据配置区域 ====================
 

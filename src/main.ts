@@ -9,21 +9,34 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import { routes } from './router'
 
-// 控制台品牌信息
+// 控制台欢迎语美化
 const showBrandInfo = () => {
-  const styles = [
-    'color: #409EFF',
-    'background: #f5f7fa',
+  // ASCII Art Logo
+  const logo = `
+   ██████╗██╗██╗  ██╗██╗    ██╗███████╗██████╗ 
+  ██╔════╝██║██║ ██╔╝██║    ██║██╔════╝██╔══██╗
+  ██║     ██║█████╔╝ ██║ █╗ ██║█████╗  ██████╔╝
+  ██║     ██║██╔═██╗ ██║███╗██║██╔══╝  ██╔══██╗
+  ╚██████╗██║██║  ██╗╚███╔███╔╝███████╗██████╔╝
+   ╚═════╝╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚══════╝╚═════╝ 
+  `
+  
+  // 渐变样式
+  const gradientStyle = [
+    'background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F59E0B 100%)',
+    'color: white',
     'font-size: 14px',
     'font-weight: bold',
-    'padding: 10px 20px',
-    'border-radius: 4px',
+    'padding: 12px 24px',
+    'border-radius: 8px',
+    'text-shadow: 0 1px 2px rgba(0,0,0,0.2)',
   ].join(';')
-
-  console.log('%c CikWeb ', styles)
-  console.log('基于 Vue 3 + TypeScript + Vite 构建')
-  console.log('GitHub: https://github.com/cikheo/CikWeb')
-  console.log('作者: Cik (https://cikcc.com)')
+  
+  // 输出 Logo
+  console.log('%c' + logo, 'color: #8B5CF6; font-family: monospace;')
+  
+  // 输出标题
+  console.log('%c 🚀 CikWeb v3.6.1 ', gradientStyle)
 }
 
 // Vite SSG 配置
