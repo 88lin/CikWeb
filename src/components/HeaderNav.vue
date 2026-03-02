@@ -141,7 +141,6 @@ const navItems = [
   { name: '工具', anchor: 'tools' },
   { name: '媒体', anchor: 'media' },
   { name: '文章', anchor: 'posts' },
-  { name: '网址', path: '/nav' },
   { name: '博客', external: true, url: 'https://blog.cikcc.com' },
 ]
 

@@ -63,15 +63,6 @@ export const routes: RouteRecordRaw[] = [
     },
   },
   {
-    path: '/nav',
-    name: 'Nav',
-    component: () => import('@/pages/Nav.vue'),
-    meta: {
-      description: '精选实用网站导航',
-      keywords: '导航, 网址, 工具, 资源',
-    },
-  },
-  {
     path: '/404',
     name: 'NotFound',
     component: () => import('@/pages/NotFound.vue'),
