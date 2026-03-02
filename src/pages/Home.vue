@@ -33,6 +33,5 @@ import ScrollReveal from '@/components/ScrollReveal.vue'
 <style scoped lang="scss">
 .home-page {
   min-height: 100vh;
-  overflow-x: hidden;
 }
 </style>

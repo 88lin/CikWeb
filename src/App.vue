@@ -5,18 +5,16 @@
 -->
 
 <template>
-  <div id="app">
-    <HeaderNav />
-    <main>
-      <RouterView v-slot="{ Component }">
-        <Transition name="page" mode="out-in">
-          <component :is="Component" />
-        </Transition>
-      </RouterView>
-    </main>
-    <Footer />
-    <BackToTop />
-  </div>
+  <HeaderNav />
+  <main>
+    <RouterView v-slot="{ Component }">
+      <Transition name="page" mode="out-in">
+        <component :is="Component" />
+      </Transition>
+    </RouterView>
+  </main>
+  <Footer />
+  <BackToTop />
 </template>
 
 <script setup lang="ts">
