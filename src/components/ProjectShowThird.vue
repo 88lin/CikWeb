@@ -125,12 +125,6 @@ const project = computed(() => {
 // 当前主图索引
 const mainImageIndex = ref(0)
 
-// 获取主图
-const mainImage = computed(() => {
-  if (!project.value) return ''
-  return project.value.images[mainImageIndex.value] || project.value.images[0]
-})
-
 // 获取卡片位置类名
 const getCardPosition = (index: number) => {
   if (!project.value) return ''
